@@ -1,0 +1,16 @@
+{
+  "name": "payment-gateway-sdk",
+  "version": "1.0.0",
+  "description": "Payment with Momo Wallet via QR code",
+  "main": "index.js",
+  "keywords": [
+    "momo",
+    "momo wallet",
+    "momo payment",
+    "momo node",
+    "momo sdk",
+    "momo api"
+  ],
+  "author": "Devtify",
+  "license": "ISC"
+}
