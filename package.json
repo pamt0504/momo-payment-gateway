@@ -1,0 +1,37 @@
+{
+  "name": "momo-payment-gateway",
+  "version": "1.0.0",
+  "description": "Payment with Momo Wallet via QR code",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:pamt0504/momo-payment-gateway.git"
+  },
+  "keywords": [
+    "momo",
+    "momo wallet",
+    "momo payment",
+    "momo node",
+    "momo sdk",
+    "momo api",
+    "momo gateway",
+    "gateway"
+  ],
+  "author": "Devtify - Thao Pham",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "@types/node": "^17.0.34"
+  }
+}
