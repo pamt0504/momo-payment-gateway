@@ -14,13 +14,14 @@ npm i momo-payment-gateway
 ```
 
 ## Usage
-```javascript
-const MomoPayment = require('momo-payment-sdk');
+```typescript
+import { MomoPayment } from 'momo-payment-gateway';
+
 
 /* HOST_WEBHOOK => Partner API. Used by MoMo to submit payment results by IPN method (server-to-server) method */
 const HOST_WEBHOOK = process.env.HOST_WEBHOOK;
 
-/* constructor: partnerCode, accessKey, secretKey ,apiEndpoint=> provide by Momo*/
+/* constructor: partnerCode, accessKey, secretKey ,apiEndpoint=> provided by Momo*/
 class MomoPaymentService {
   constructor( partnerCode, accessKey, secretKey, endpoint) {
     this.momoPayment = new MomoPayment({
@@ -30,7 +31,8 @@ class MomoPaymentService {
       apiEndpoint,
     });
   }
-/* Return the URL payment by QR code */
+
+/* The payment method payUrl is returned  */
   async createPayment({
     orderId,
     amount,
@@ -44,7 +46,7 @@ class MomoPaymentService {
       const result = await this.momoPayment.createPayment({
         requestId: `ID-${orderId}-${Math.round(Date.now() / 1000)}`,
         orderId: `${orderId}-${Math.round(Date.now() / 1000)}`,
-        amount: Number(amount),
+        amount,
         orderInfo,
         returnUrl,
         ipnUrl: HOST_WEBHOOK,
@@ -56,7 +58,7 @@ class MomoPaymentService {
     }
   }
   
-/* Rollback the transaction */
+/* Proceed the refund payment */
   async refundPayment({ requestId, orderId, amount, transId }) {
     try {
       if (!orderId || !amount || !transId) {
@@ -75,7 +77,7 @@ class MomoPaymentService {
     }
   }
 
-/* The function for verify webhook request */
+/* The function for verify webhook request and payment */
   verifySignature({
     signature,
     requestId,
@@ -112,7 +114,6 @@ class MomoPaymentService {
     }
   }
 }
-module.exports = MomoPaymentService;
 ```
 
 ## Contributing
