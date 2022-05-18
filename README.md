@@ -119,13 +119,10 @@ module.exports = MomoPaymentService;
 Pull requests are welcome
 
 ## Important
-Mail:  hoangtran2198@gmail.com
-Skype: tranminhhoangnct@gmail.com
-Documentation: https://developers.momo.vn/v2/#/docs/qr_payment
+Mail:  thao.pamt@gmail.com
+Skype: phamanmaithao10@gmail.com
+Documentation: https://developers.momo.vn/
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
-## Team
-[![Hoang Tran](https://github.com/hoangtran2.png?size=100)](https://github.com/hoangtran2)
-| [Hoang Tran](https://hoangtran.dev) |                                          
+                           
