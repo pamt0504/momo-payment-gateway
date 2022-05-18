@@ -11,6 +11,9 @@
     "momo sdk",
     "momo api"
   ],
-  "author": "Devtify",
-  "license": "ISC"
+  "author": "Devtify - Thao Pham",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.4"
+  }
 }

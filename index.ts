@@ -90,7 +90,7 @@ export class MomoPayment {
         orderId,
         amount,
         transId,
-        lang: 'vi',
+        lang: 'en',
         signature,
       }),
     });
