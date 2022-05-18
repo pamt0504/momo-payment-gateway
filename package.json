@@ -15,5 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.34"
   }
 }
