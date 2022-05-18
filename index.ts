@@ -1,4 +1,4 @@
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 import fetch from 'node-fetch';
 
 export class MomoPayment {
@@ -172,48 +172,4 @@ export class MomoPayment {
     };
 
   }
-
-  async checkRefundMomoThrowERR(resultCode) {
-    switch (resultCode) {
-      case 0: return 'Successful';
-
-      case 11: return 'Access denied.';
-      case 12: return 'Unsupported API version for this request.'
-      case 13: return 'Merchant authentication failed.'
-      case 20: return 'Bad format request.'
-      case 21: return 'Invalid transaction amount.'
-      case 40: return 'Duplicated requestId.'
-      case 41: return 'Duplicated orderId.'
-      case 42: return "Invalid orderId or orderId is not found."
-      case 43: return 'Request rejected due to an analogous transaction is being processed.No	Before retry, please check if another analogous transaction is being processed which restricts this request.'
-      case 10: return 'System is under maintenance.No	Please retry after the maintenance is over.'
-      case 99: return 'Unknown error.Yes	Please contact MoMo for more details.'
-      case 1000: return 'Transaction is initiated, waiting for user confirmation.';
-      case 1001: return 'Transaction failed due to insufficient funds.Yes'
-      case 1002: return 'Transaction rejected by the issuers of the payment methods.Yes	Please choose other payment methods.'
-      case 1003: return 'Transaction cancelled after successfully authorized.Yes	The transaction was canceled by merchant or MoMo system due to timeout handlers.Please mark the transaction as failed.'
-      case 1004: return 'Transaction failed because the amount exceeds daily / monthly payment limit.Yes	Please mark the transaction as failed, and retry another day.'
-      case 1005: return 'Transaction failed because the url or QR code expired.Yes	Please send another payment request.'
-      case 1006: return 'Transaction failed because user has denied to confirm the payment.Yes	Please send another payment request.'
-      case 1007: return 'Transaction rejected due to inactive user\'s eWallet account.Yes	Please proceed with another payment method which is not associated with this eWallet account.For refund, you can also contact MoMo for help.'
-      case 1026: return 'Transaction restricted due to promotion rules.Yes	Please contact MoMo for the restriction details.'
-      case 1080: return 'Refund rejected.The original transaction cannot be found.Yes	Please check if the original orderId or TID used in the request is correct.'
-      case 1081: return 'Refund rejected.The original transaction might have been refunded.Yes	Please check if the original transaction has already been refunded, or the amount of your refund request exceeds the refundable amount.'
-      case 2001: return 'Transaction failed due to invalid token.Yes	The token has been deleted, please update accordingly.'
-      case 2007: return 'Transaction failed due to inactive token.Yes	The token is inactive due to user decided to temporary lock the binding.'
-      case 3001: return 'Binding failed because user has denied to confirm the authorization.Yes'
-      case 3002: return 'Binding rejected due to authorization restrictions.Yes	Please contact MoMo for the restriction details.'
-      case 3003: return 'Unbinding rejected due to authorization restrictions.Yes	Please contact MoMo for the restriction details.'
-      case 3004: return 'Token cannot be provoked due to pending transactions.Yes	Please contact MoMo for the restriction details.'
-      case 4001: return 'Transaction restricted due to incomplete KYCs.Yes'
-      case 4010: return 'OTP verification failed.Yes	User authentication failed.Please request another authentication.'
-      case 4011: return 'OTP is not sent or timeout.Yes	Please request to send another OTP.'
-      case 4100: return 'Transaction failed because user has failed to login.Yes'
-      case 4015: return '3DS verification failed.Yes	User authentication failed.Please request another authentication verification for retry.'
-      case 9000: return 'Transaction is authorized successfully.';
-      case 8000: return 'Transaction is pre-authorized, waiting for user confirmation.';
-      case 7000: return 'Transaction is being processed.';
-    }
-  }
 }
-
