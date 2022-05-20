@@ -156,7 +156,7 @@ export class MomoPayment {
             .createHmac('sha256', this.secretKey)
             .update(signatureRaw)
             .digest('hex');
-        if (resultCode !== '0') {
+        if (resultCode.toString() !== 0) {
             throw new Error('The transaction was not completed.');
         }
         if (signatureValue !== signature) {
