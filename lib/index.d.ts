@@ -53,6 +53,7 @@ export declare class MomoPayment {
         extraData: string;
         signature: string;
     }): Promise<{
+        type: string;
         orderId: string;
         requestId: string;
         amount: number;
