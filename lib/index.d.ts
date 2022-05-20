@@ -41,7 +41,7 @@ export declare class MomoPayment {
     verifyPayment({ partnerCode, orderId, requestId, amount, orderInfo, orderType, transId, resultCode, message, payType, responseTime, extraData, signature, }: {
         partnerCode: string;
         orderId: string;
-        requestId: number;
+        requestId: string;
         amount: number;
         orderInfo: string;
         orderType: string;
@@ -54,7 +54,7 @@ export declare class MomoPayment {
         signature: string;
     }): Promise<{
         orderId: string;
-        requestId: number;
+        requestId: string;
         amount: number;
         orderInfo: string;
         orderType: string;
