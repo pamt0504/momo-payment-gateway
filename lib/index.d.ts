@@ -22,7 +22,7 @@ export declare class MomoPayment {
         requestId: string;
         orderId: string;
         amount: number;
-        transId: string;
+        transId: number;
     }): Promise<unknown>;
     verifySignature({ signature, requestId, orderId, amount, orderInfo, orderType, transId, message, responseTime, resultCode, payType, extraData, }: {
         signature: string;
@@ -31,7 +31,7 @@ export declare class MomoPayment {
         amount: number;
         orderInfo: string;
         orderType: string;
-        transId: string;
+        transId: number;
         message: string;
         responseTime: number;
         resultCode: number;
@@ -41,7 +41,7 @@ export declare class MomoPayment {
     verifyPayment({ partnerCode, orderId, requestId, amount, orderInfo, orderType, transId, resultCode, message, payType, responseTime, extraData, signature, }: {
         partnerCode: string;
         orderId: string;
-        requestId: string;
+        requestId: number;
         amount: number;
         orderInfo: string;
         orderType: string;
