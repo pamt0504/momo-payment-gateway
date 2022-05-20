@@ -121,7 +121,6 @@ export class MomoPayment {
             !transId ||
             !message ||
             !responseTime ||
-            !resultCode ||
             !payType
         ) {
             throw new Error('invalid input');
