@@ -165,9 +165,16 @@ export class MomoPayment {
         return {
             type: 'momo',
             orderId,
-            transId,
             requestId,
             amount,
+            orderInfo,
+            orderType,
+            transId,
+            resultCode,
+            message,
+            payType,
+            responseTime,
+            extraData,
         };
 
     }

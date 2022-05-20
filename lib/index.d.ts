@@ -45,7 +45,7 @@ export declare class MomoPayment {
         amount: number;
         orderInfo: string;
         orderType: string;
-        transId: string;
+        transId: number;
         resultCode: number;
         message: string;
         payType: string;
@@ -54,11 +54,11 @@ export declare class MomoPayment {
         signature: string;
     }): Promise<{
         orderId: string;
-        requestId: string;
+        requestId: number;
         amount: number;
         orderInfo: string;
         orderType: string;
-        transId: string;
+        transId: number;
         resultCode: number;
         message: string;
         payType: string;
