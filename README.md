@@ -24,7 +24,7 @@ const HOST_WEBHOOK = process.env.HOST_WEBHOOK;
 /* constructor: partnerCode, accessKey, secretKey ,apiEndpoint=> provided by Momo
 apiEndpoint: 
   sandbox:  https://test-payment.momo.vn
-  live:     https://payment.momo.vn/
+  live:     https://payment.momo.vn
 */
 class MomoPaymentService {
   constructor( partnerCode, accessKey, secretKey, endpoint) {
