@@ -21,7 +21,11 @@ import { MomoPayment } from 'momo-payment-gateway';
 /* HOST_WEBHOOK => Partner API. Used by MoMo to submit payment results by IPN method (server-to-server) method */
 const HOST_WEBHOOK = process.env.HOST_WEBHOOK;
 
-/* constructor: partnerCode, accessKey, secretKey ,apiEndpoint=> provided by Momo*/
+/* constructor: partnerCode, accessKey, secretKey ,apiEndpoint=> provided by Momo
+apiEndpoint: 
+  sandbox:  https://test-payment.momo.vn
+  live:     https://payment.momo.vn/
+*/
 class MomoPaymentService {
   constructor( partnerCode, accessKey, secretKey, endpoint) {
     this.momoPayment = new MomoPayment({
