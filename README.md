@@ -8,6 +8,9 @@ The plugin will make it easier to integrate Momo Wallet payments via QR code.
 ## Installation
 The first, Momo partner must be successfully registered.
 Use the package manager [npm](https://www.npmjs.com/) to install.
+More payment gateway: 
+https://www.npmjs.com/package/payoo-payment-gateway
+https://www.npmjs.com/package/atome-payment-gateway
 
 ```bash
 npm i momo-payment-gateway
