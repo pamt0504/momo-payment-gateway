@@ -17,13 +17,13 @@ export declare class MomoPayment {
         redirectUrl: string;
         ipnUrl: string;
         extraData?: string;
-    }): Promise<unknown>;
+    }): Promise<any>;
     refundPayment({ requestId, orderId, amount, transId }: {
         requestId: string;
         orderId: string;
         amount: number;
         transId: number;
-    }): Promise<unknown>;
+    }): Promise<any>;
     verifySignature({ signature, requestId, orderId, amount, orderInfo, orderType, transId, message, responseTime, resultCode, payType, extraData, }: {
         signature: string;
         requestId: string;
